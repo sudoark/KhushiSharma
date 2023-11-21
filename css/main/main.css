@@ -2,8 +2,8 @@
     display: none;
 }
 
-.navigate-up .navigate-left .controls-arrow,
-.navigate-down .navigate-right .controls-arrow {
+.navigate-up, .navigate-left, .controls-arrow,
+.navigate-down, .navigate-right, .controls-arrow {
     color: #DA09F6;
 }
 
