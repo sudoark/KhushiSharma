@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .loaderdiv {
+        width: 100%;
+        height: 100dvh;
+        background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.loader {
+  display: block;
+  width: 12em;
+  height: 12em;
+  overflow: visible;
+}
+
+.loader path.fill {
+  fill: #2Af2;
+  animation: fill 4s ease-in-out infinite;
+}
+
+.loader .dash path {
+  stroke: #2AF;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  animation: dashArray var(--sped, 2s) ease-in-out infinite,
+    dashOffset var(--sped, 2s) linear infinite;
+}
+.loader .dash path.big {
+  stroke-width: 2px;
+  filter: drop-shadow(0 0 2px #2AF);
+}
+
+@keyframes dashArray {
+  0% {
+    stroke-dasharray: 0 1 359 0;
+  }
+
+  50% {
+    stroke-dasharray: 0 359 1 0;
+  }
+
+  100% {
+    stroke-dasharray: 359 1 0 0;
+  }
+}
+
+@keyframes dashOffset {
+  0% {
+    stroke-dashoffset: -5;
+  }
+
+  100% {
+    stroke-dashoffset: -365;
+  }
+}
+
+@keyframes fill {
+  30%,
+  55% {
+    fill: #2AF0;
+  }
+}
+
+
+</style>
+<div class="loaderdiv" id="loader">
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="loader">
+        <g class="dash">
+          <path style="--sped: 4s;" pathLength="360" d="M24.7051 19.5723C21.7762 20.5485 17.1392 24.4535 21.0442 33.2397C25.9254 44.2224 33.003 65.9438 16.8952 70.581C10.9896 72.2811 17.6271 45.4427 30.5626 40.8056C40.8129 37.131 59.6058 36.9006 66.1955 37.3887
+      M18.1152 33.9719C12.9085 35.7617 2.39766 40.3175 2.00716 44.2225C1.61666 48.1275 17.3016 45.8496 25.1929 44.2225
+      M13.722 2C10.4679 11.0303 3.56907 35.3387 2.00708 60.3306" class="big"></path>
+        </g>
+      </svg>
+      </div>
+<body>
+
+</body>
+<script>
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            document.querySelector(
+              "body").style.visibility = "hidden";
+            document.querySelector(
+              "#loader").style.visibility = "visible";
+              window.scrollTo(0,0); 
+        } else {
+            setTimeout(() => {
+                document.querySelector(
+                "#loader").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+            window.scrollTo(0, 0);
+            }, "300000");
+        }
+    };
+  </script>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS's For This Page Starts Here -->
+    <link rel="stylesheet" href="css/main/canvas.css"> <!-- Canvas CSS For Khushi Sharma -->
+    <link rel="stylesheet" href="css/main/main.css"> <!-- Main CSS For This Page -->
+    <link rel="stylesheet" href="css/main/revealjsCDNv4.5.0.css"> <!-- main revealjs css -->
+    <link rel="stylesheet" href="css/main/revealjsthemeblackCDNv4.6.1.css"> <!-- revealjs black theme css -->
+    <!-- CSS's For This Page Ends Here -->
+
+    <!-- Scripts/CDN's For This Page Starts Here -->
+    <script src="js/tailwindcssCDNv3.3.5.js"></script> <!-- Tailwindcss CDN -->
+    <script src="js/main.js"></script> <!-- Main Js For This Page -->
+    <script src="js/splitTypeCDNv0.3.4.js"></script> <!-- SplitType CDN -->
+    <script src="js/gsapCDNv3.12.2.js"></script> <!-- gsap CDN -->
+    <!-- Scripts/CDN's For This Page Ends Here -->
+
+    <!-- links for fonts start here -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@100;200&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
+    <!-- links for fonts end here -->
+
+    <title>Khushi Sharma</title>
+</head>
+<noscript>
+    <style>
+        .notice {
+            color: white;
+            font-weight: normal;
+            /* text-shadow: 0px 2px 0px red; */
+            text-align: center;
+            font-size: xxx-large;
+            text-decoration: none;
+        }
+    </style>
+    <div class="notice">
+        <h1>JavaScript is Disabled</h1>
+        <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.</p>
+        <a href="https://www.enable-javascript.com/" style="text-decoration: none; color: white; font-weight: 900;"
+            target="_blank" rel="noopener noreferrer">To know how to enable javascript in your browser kindly <br><span
+                style="text-decoration: underline;">click here.</span></a>
+    </div>
+</noscript>
+<!-- loader starts here -->
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .loaderdiv {
+        width: 100%;
+        height: 100dvh;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loader {
+        display: block;
+        width: 12em;
+        height: 12em;
+        overflow: visible;
+    }
+
+    .loader path.fill {
+        fill: #2Af2;
+        animation: fill 4s ease-in-out infinite;
+    }
+
+    .loader .dash path {
+        stroke: #2AF;
+        stroke-width: 1px;
+        stroke-linecap: round;
+        animation: dashArray var(--sped, 2s) ease-in-out infinite,
+            dashOffset var(--sped, 2s) linear infinite;
+    }
+
+    .loader .dash path.big {
+        stroke-width: 2px;
+        filter: drop-shadow(0 0 2px #2AF);
+    }
+
+    @keyframes dashArray {
+        0% {
+            stroke-dasharray: 0 1 359 0;
+        }
+
+        50% {
+            stroke-dasharray: 0 359 1 0;
+        }
+
+        100% {
+            stroke-dasharray: 359 1 0 0;
+        }
+    }
+
+    @keyframes dashOffset {
+        0% {
+            stroke-dashoffset: -5;
+        }
+
+        100% {
+            stroke-dashoffset: -365;
+        }
+    }
+
+    @keyframes fill {
+
+        30%,
+        55% {
+            fill: #2AF0;
+        }
+    }
+</style>
+<div class="loaderdiv" id="loader">
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="loader">
+        <g class="dash">
+            <path style="--sped: 4s;" pathLength="360" d="M24.7051 19.5723C21.7762 20.5485 17.1392 24.4535 21.0442 33.2397C25.9254 44.2224 33.003 65.9438 16.8952 70.581C10.9896 72.2811 17.6271 45.4427 30.5626 40.8056C40.8129 37.131 59.6058 36.9006 66.1955 37.3887
+      M18.1152 33.9719C12.9085 35.7617 2.39766 40.3175 2.00716 44.2225C1.61666 48.1275 17.3016 45.8496 25.1929 44.2225
+      M13.722 2C10.4679 11.0303 3.56907 35.3387 2.00708 60.3306" class="big"></path>
+        </g>
+    </svg>
+</div>
+<!-- loader ends here -->
+<header class="astro-UY3JLCBK astro-UY3JLCBK-nav" style="z-index: 11; position: relative;">
+    <nav class="z-10 w-full absolute astro-UY3JLCBK-nav">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+            <div
+                class="flex flex-wrap items-center justify-between py-2 gap-6 md:py-4 md:gap-0 relative astro-UY3JLCBK">
+                <input aria-hidden="true" type="checkbox" name="toggle_nav" id="toggle_nav"
+                    class="hidden peer astro-UY3JLCBK">
+                <div class="relative z-20 w-full flex justify-between lg:w-max md:px-0 astro-UY3JLCBK">
+                    <a href="#" aria-label="logo" class="flex space-x-2 items-center astro-UY3JLCBK">
+                        <div aria-hidden="true" class="flex space-x-1 astro-UY3JLCBK">
+                            <img src="images/LOGO.svg" alt="logo">
+                        </div>
+                    </a>
+                    <div class="relative flex items-center lg:hidden max-h-10 astro-UY3JLCBK">
+                        <label role="button" for="toggle_nav" aria-label="humburger" id="hamburger"
+                            class="relative  p-6 -mr-6 astro-UY3JLCBK">
+                            <div aria-hidden="true" id="line"
+                                class="m-auto h-0.5 w-5 rounded bg-sky-900 dark:bg-gray-300 transition duration-300 astro-UY3JLCBK">
+                            </div>
+                            <div aria-hidden="true" id="line2"
+                                class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 dark:bg-gray-300 transition duration-300 astro-UY3JLCBK">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div aria-hidden="true"
+                    class="fixed z-10 inset-0 h-screen w-screen backdrop-blur-2xl origin-bottom scale-y-0 transition duration-500 peer-checked:origin-top peer-checked:scale-y-100 lg:hidden astro-UY3JLCBK">
+                </div>
+                <div class="flex-col z-20 flex-wrap gap-6 p-8 rounded-3xl border border-gray-100 shadow-2xl shadow-gray-600/10 justify-end w-full invisible opacity-0 translate-y-1  absolute top-full left-0 transition-all duration-300 scale-95 origin-top 
+                            lg:relative lg:scale-100 lg:peer-checked:translate-y-0 lg:translate-y-0 lg:flex lg:flex-row lg:items-center lg:gap-0 lg:p-0 lg:bg-transparent lg:w-7/12 lg:visible lg:opacity-100 lg:border-none
+                            peer-checked:scale-100 peer-checked:opacity-100 peer-checked:visible lg:shadow-none 
+                             astro-UY3JLCBK">
+                    <div class="text-gray-600 dark:text-gray-300 lg:pr-4 lg:w-auto w-full lg:pt-0 astro-UY3JLCBK">
+                        <ul
+                            class="tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-4 astro-UY3JLCBK">
+                            <li class="astro-UY3JLCBK">
+                                <a href="#divOne"
+                                    class="block md:px-4 transition NavColor hover:text-white astro-UY3JLCBK">
+                                    <span class="astro-UY3JLCBK">Home</span>
+                                </a>
+                            </li>
+                            <li class="astro-UY3JLCBK">
+                                <a href="#project"
+                                    class="block md:px-4 transition NavColor hover:text-white astro-UY3JLCBK">
+                                    <span class="astro-UY3JLCBK">Projects</span>
+                                </a>
+                            </li>
+                            <li class="astro-UY3JLCBK">
+                                <a href="#connect"
+                                    class="block md:px-4 transition NavColor hover:text-white astro-UY3JLCBK">
+                                    <span class="astro-UY3JLCBK">Connect With Me</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body style="background: black; font-family: 'Montserrat', sans-serif;">
+    <!-- main div -->
+    <div class="snap-y snap-mandatory w-[100%] h-screen overflow-y-scroll ">
+        <!-- child div home start here -->
+        <div class="snap-always snap-center h-screen flex activedivs w-[100%]" id="divOne">
+            <!-- <canvas id="canvas3d">
+            </canvas>
+
+            <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+            <script type="importmap" id="importmapspline">
+                {
+                  "imports": {
+                    "@splinetool/runtime": "./js/spline/runtime.js"
+                  }
+                }
+              </script>
+            <script type="module" src="js/canvas.js"></script> -->
+            <div class="max-w-7xl lg:mx-auto lg:px-6 max-[500px]:mx-[1rem] md:px-12 xl:px-6 w-[100%]">
+                <div class="relative pt-36 ml-auto">
+                    <div class="float-right left-[-115]">
+                        <svg class="left-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg>
+                        <svg class="right-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                        </svg>
+                    </div>
+                    <div class="lg:w-2/3 text-center mx-auto" style="visibility: hidden;">
+                        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Shaping a
+                            world with
+                            <span class="text-primary dark:text-white">reimagination.</span>
+                        </h1>
+                        <p class="mt-8 text-gray-700 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                            Odio incidunt nam itaque sed eius modi error totam sit illum. Voluptas doloribus asperiores
+                            quaerat
+                            aperiam. Quidem harum omnis beatae ipsum soluta!</p>
+                        <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+                            <a href="#"
+                                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+                                <span class="relative text-base font-semibold text-white">Get started</span>
+                            </a>
+                            <a href="#"
+                                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
+                                <span class="relative text-base font-semibold text-primary dark:text-white">Learn
+                                    more</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <img src="images/01.svg" alt="02" class="one absolute hidden lg:block ml-[82%]">
+                    <div class="lg:top-[115%] absolute home-crea" id="remove1">
+                        <h6 style="color: #9F9F9F;" id="remove11">
+                            When you
+                        </h6>
+                        <br id="remove3">
+                        <p style="font-family: 'Montserrat', sans-serif; color: #9F9F9F">creatively
+                            <span style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;"
+                                class="font-semibold">Create.</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- child div home end here -->
+        <br>
+        <!-- child div connect 1 start here -->
+        <div class="snap-always snap-center h-screen flex activedivs" id="connect">
+            <div
+                class="max-w-7xl mx-auto lg:mt-[15%] px-6 md:px-12 xl:px-6 place-self-center relative lg:about-div about-sm">
+                <div class="lg:top-[100px]">
+                    <h1 class=" text-2xl md:text-7xl/[5.25rem] about about-text">
+                        Hi, I <span>Design</span> , Sing , Write & Solve Problems
+                    </h1>
+                    <p class="text-white font-[600] mt-[40px] description">A UX Designer with a penchant for turning
+                        <span>pixels into poetry</span>. My design philosophy is to put users at<br> the center stage,
+                        crafting digital symphonies that resonate with their hearts and minds. Let's<br> embark on a
+                        creative journey together, where <span>simplicity meets sophistication</span> in every design.
+                    </p>
+                </div>
+                <div class="mt-[8%] absolute lg:top-[75px]" id="desid">
+                    <h6 style="color: #9F9F9F">
+                        When you
+                    </h6>
+                    <br>
+                    <p style="font-family: 'Montserrat', sans-serif; color: #9F9F9F">creatively
+                        <span style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;"
+                            class="font-semibold">Create.</span>
+                    </p>
+                </div>
+                <img src="images/02.svg" alt="02" class="hidden lg:block ml-[82%] lg:relative lg:top-[-100px]">
+            </div>
+        </div>
+        <!-- child div connect 1 end here -->
+        <br>
+        <!-- child div connect 2 start here -->
+        <div class="snap-always snap-center h-screen flex activedivs" id="connect">
+            <section class=" body-font max-w-7xl mx-auto px-6 md:px-12 xl:px-6 place-self-center relative">
+                <div class="container mx-auto flex px-5 lg:py-24 md:flex-row flex-col items-center connect-2" id="connect22">
+                    <div class="lg:max-w-fit lg:w-full lg:w-1/2 w-5/6 lg:mb-0">
+                        <img class="object-cover object-center rounded img-sm" alt="hero" src="images/image 7.svg">
+                    </div>
+                    <div
+                        class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center lg:max-w-[57%]">
+                        <p class="text-white font-[600] lg:mt-[40px] description">In my 3 years of working experience i
+                            have come to a conclusion that there is <span>No Box</span>. Our mind goes where it is easy
+                            to reach so if we tell ourselves that there is a box where everything is easy we will not
+                            ever <span>Think Outside The Box</span>.
+                        </p>
+                        <p class="text-white font-[600] lg:mt-[40px] mt-[20px] description">I like to <span>play with
+                                minds</span> so
+                            that my designs seem <span>playful</span> to the users.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="lg:mt-[-5%] connect-crea absolute" id="conid">
+                    <h6 style="color: #9F9F9F">
+                        When you
+                    </h6>
+                    <br>
+                    <p style="font-family: 'Montserrat', sans-serif; color: #9F9F9F">creatively
+                        <span style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;"
+                            class="font-semibold">Create.</span>
+                    </p>
+                </div>
+                <img src="images/03.svg" alt="02" class="absolute hidden lg:block ml-[79%] mt-[-15.5%]">
+            </section>
+        </div>
+        <!-- child div connect 2 end here -->
+        <br>
+        <!-- child div project start here -->
+        <div class="snap-center h-screen flex activedivs" id="project">
+            <div class="div snap-y snap-mandatory w-[100%] h-screen overflow-y-scroll">
+                <div class="snap-center h-screen flex items-center justify-center flex-col">
+                    <img src="images/Group 7.svg" class="project-graphic-img" alt="" id="p1">
+                    <div class=" text-left relative max-[460px]:left-[-27%] lg:left-[-35%] lg:bottom-[-10%] project-crea"
+                        id="p11">
+                        <h6 style="color: #9F9F9F">
+                            When you
+                        </h6>
+                        <p style="font-family: 'Montserrat', sans-serif; color: #9F9F9F">creatively
+                            <span style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;"
+                                class="font-semibold">Create.</span>
+                        </p>
+                    </div>
+                    <div style="position: relative; " class="lg:top-[10%] project-bt lg:z-20">
+                        <button class="button-pj" onclick="show()" id="show">EXPLORE</button>
+                        <button class="button-pj hide-bt" onclick="hide()" id="hide"
+                            style="display: none;">BACK</button>
+                    </div>
+                    <div class="reveal" style="display: none;">
+                        <div class="slides">
+                            <section><img src="images/Group 7.svg" class="sec-image max-[500px]:width-[50%]"
+                                style="display: inline-flex;" alt="" srcset=""></section>
+                                <section>
+                                    <img src="images/Group 7.svg" class="sec-image max-[500px]:w-[65%] max-[500px]:relative max-[500px]:top-[-50px] min-[500px]:width-[50%]"
+                                        style="display: inline-flex;" alt="" srcset="">
+                                        <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+                                        <link rel="stylesheet" href="project.css">
+                                        <script src="project.js"></script>
+                                        <div id="wrapper"  style="top: 80px; position: relative;">
+                                            <section class="slideshow" id="js-header">
+                                              
+                                              <div class="slideshow__slide js-slider-home-slide is-current" data-slide="1">
+                                                  <div class="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
+                                                      <div class="slideshow__slide-background-load-wrap background-absolute">
+                                                          <div class="slideshow__slide-background-load background-absolute">
+                                                              <div class="slideshow__slide-background-wrap background-absolute">
+                                                                  <div class="slideshow__slide-background background-absolute">
+                                                                      <div class="slideshow__slide-image-wrap background-absolute">
+                                                                          <div class="slideshow__slide-image background-absolute" style="background-image: url('https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920');"></div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="slideshow__slide-caption">
+                                                      <div class="slideshow__slide-caption-text">
+                                                          <div class="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
+                                                              <h1 class="slideshow__slide-caption-title">Everything broken can be repaired</h1>
+                                                              <a class="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+                                                                  <span class="slideshow__slide-caption-subtitle-label">See how</span>
+                                                              </a>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              
+                                              <div class="slideshow__slide js-slider-home-slide is-next" data-slide="2">
+                                                  <div class="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
+                                                      <div class="slideshow__slide-background-load-wrap background-absolute">
+                                                          <div class="slideshow__slide-background-load background-absolute">
+                                                              <div class="slideshow__slide-background-wrap background-absolute">
+                                                                  <div class="slideshow__slide-background background-absolute">
+                                                                      <div class="slideshow__slide-image-wrap background-absolute">
+                                                                          <div class="slideshow__slide-image background-absolute" style="background-image: url('https://images.pexels.com/photos/110649/pexels-photo-110649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920');"></div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="slideshow__slide-caption">
+                                                      <div class="slideshow__slide-caption-text">
+                                                          <div class="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
+                                                              <h1 class="slideshow__slide-caption-title">See through the field</h1>
+                                                              <a class="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+                                                                  <span class="slideshow__slide-caption-subtitle-label">Learn more about</span>
+                                                              </a>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              
+                                              <div class="slideshow__slide js-slider-home-slide is-prev" data-slide="3">
+                                                  <div class="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
+                                                      <div class="slideshow__slide-background-load-wrap background-absolute">
+                                                          <div class="slideshow__slide-background-load background-absolute">
+                                                              <div class="slideshow__slide-background-wrap background-absolute">
+                                                                  <div class="slideshow__slide-background background-absolute">
+                                                                      <div class="slideshow__slide-image-wrap background-absolute">
+                                                                          <div class="slideshow__slide-image background-absolute" style="background-image: url('https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920');"></div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="slideshow__slide-caption">
+                                                      <div class="slideshow__slide-caption-text">
+                                                          <div class="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
+                                                              <h1 class="slideshow__slide-caption-title">Hey, take a time to relax!</h1>
+                                                              <a class="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+                                                                  <span class="slideshow__slide-caption-subtitle-label">Everybody needs</span>
+                                                              </a>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              
+                                              <div class="c-header-home_footer">
+                                                  <div class="o-container">
+                                                      <div class="c-header-home_controls -nomobile o-button-group">
+                                                          <div class="js-parallax is-inview" data-speed="1" data-position="top" data-target="#js-header">
+                                                              <button class="o-button -white -square -left js-slider-home-button js-slider-home-prev" type="button">
+                                                                  <span class="o-button_label">
+                                                                      <svg class="o-button_icon" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-prev"></use></svg>
+                                                                  </span>
+                                                              </button>
+                                                              <button class="o-button -white -square js-slider-home-button js-slider-home-next" type="button">
+                                                                  <span class="o-button_label">
+                                                                      <svg class="o-button_icon" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-next"></use></svg>
+                                                                  </span>
+                                                              </button>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                             
+                                              
+                                            </section>
+                                          <div> -->
+                                            
+                                          <!-- <svg xmlns="http://www.w3.org/2000/svg">
+                                              <symbol viewBox="0 0 18 18" id="arrow-next">
+                                                  <path id="arrow-next-arrow.svg" d="M12.6,9L4,17.3L4.7,18l8.5-8.3l0,0L14,9l0,0l-0.7-0.7l0,0L4.7,0L4,0.7L12.6,9z"/>
+                                              </symbol>
+                                              <symbol viewBox="0 0 18 18" id="arrow-prev">
+                                                  <path id="arrow-prev-arrow.svg" d="M14,0.7L13.3,0L4.7,8.3l0,0L4,9l0,0l0.7,0.7l0,0l8.5,8.3l0.7-0.7L5.4,9L14,0.7z"/>
+                                              </symbol>
+                                          </svg> -->
+                                    <!-- <p style="text-align: center; color: white;">hello world</p> -->
+                                </section>
+                                <section><img src="images/Group 7.svg" class="sec-image max-[500px]:width-[50%]"
+                                        style="display: inline-flex;" alt="" srcset="">
+                                    <!-- <p style="text-align: center; color: white;">hello world</p> -->
+                                </section>
+                                <section><img src="images/Group 7.svg" class="sec-image max-[500px]:width-[50%]"
+                                        style="display: inline-flex;" alt="" srcset="">
+                                    <!-- <p style="text-align: center; color: white;">hello world</p> -->
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="snap-center h-screen flex" id="p2"></div>
+                <div class="snap-center h-screen flex" id="p3"></div>
+                <div class="snap-center h-screen flex" id="p4"></div>
+            </div>
+
+            <!-- number indicators start here-->
+            <div class="number-indicators-project hidden lg:flex">
+                <div class="number-project active1">01</div>
+                <div class="number-project">02</div>
+                <div class="number-project">03</div>
+                <div class="number-project">04</div>
+            </div>
+            <!-- number indicators end here -->
+        </div>
+        <!-- child div project end here -->
+    </div>
+    <!-- main div end here -->
+
+    <!-- dot indicators start here-->
+    <div id="dot-indicator"
+        class="fixed hidden lg:flex flex-col items-center top-1/2 transform -translate-y-1/2 right-[6rem]">
+    </div>
+    <!-- dot indicators end here -->
+
+</body>
+<!-- import map for spline start here -->
+<!-- https://unpkg.com/@splinetool/runtime@0.9.507/build/runtime.js -->
+
+<!-- import map for spline end here -->
+
+<!-- loader  script start here -->
+<script>
+    document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+            document.querySelector(
+                "body").style.visibility = "hidden";
+            document.querySelector(
+                "#loader").style.visibility = "visible";
+            window.scrollTo(0, 0);
+        } else {
+            setTimeout(() => {
+                document.querySelector(
+                "#loader").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+            window.scrollTo(0, 0);
+            }, "000");
+        }
+    };
+</script>
+<!-- loader script end here -->
+
+<!-- revealjs CDN start here -->
+<script src="js/revealjsCDNv4.6.0.js"></script>
+<!-- revealjs CDN end here -->
+
+<!-- classes remove for animation start here -->
+<script>
+    //         function removeInlineStyles(elementIds) {
+    //   var delay = 1000;
+
+    //   function removeStylesWithDelay(index) {
+    //     setTimeout(function () {
+    //       var elementId = elementIds[index];
+    //       var targetElement = document.getElementById(elementId);
+    //       if (targetElement) {
+    //         targetElement.style.removeProperty('display');
+    //         targetElement.style.removeProperty('position');
+    //         console.log('Inline styles removed successfully for element with ID: ' + elementId);
+    //       } else {
+    //         console.error('Element with ID ' + elementId + ' not found.');
+    //       }
+
+    //       if (index < elementIds.length - 1) {
+    //         removeStylesWithDelay(index + 1);
+    //       }
+    //     }, delay);
+    //   }
+    //   removeStylesWithDelay(0);
+    // }
+    // removeInlineStyles(['remove1', 'remove11']);
+
+    function removeInlineStylesAndBr(elementIds) {
+        var delay = 500;
+
+        function removeStylesAndBrWithDelay(index) {
+            setTimeout(function () {
+                var elementId = elementIds[index];
+                var targetElement = document.getElementById(elementId);
+
+                if (targetElement) {
+                    targetElement.style.removeProperty('display');
+                    targetElement.style.removeProperty('position');
+                    console.log('Inline styles removed successfully for element with ID: ' + elementId);
+                } else {
+                    console.error('Element with ID ' + elementId + ' not found.');
+                }
+
+                if (elementId === 'remove3') {
+                    var brElement = document.getElementById('remove3');
+                    if (brElement) {
+                        brElement.parentNode.removeChild(brElement);
+                        console.log('<br> tag with ID "remove3" removed successfully.');
+                    } else {
+                        console.error('Element with ID "remove3" not found.');
+                    }
+                }
+
+                if (index < elementIds.length - 1) {
+                    removeStylesAndBrWithDelay(index + 1);
+                }
+            }, delay);
+        }
+        removeStylesAndBrWithDelay(0);
+    }
+    removeInlineStylesAndBr(['remove1', 'remove11', 'remove3', 'canvas3d', 'importmapspline']);
+</script>
+<!-- classes remove for animation end here -->
+
+<!-- animation for text start here -->
+<script>
+    function createScrollAnimation(element) {
+        const splitText = new SplitType(element, { types: 'words, chars' });
+
+        gsap.timeline()
+            .to(element, { opacity: 1, y: 0, duration: 0.5, ease: 'bounce.out' })
+            .from(splitText.words, { opacity: 0, y: 100, stagger: 0.01, duration: 1.5, ease: 'back.out' });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const snapDivs = document.querySelectorAll('.snap-always');
+
+        snapDivs.forEach((element) => {
+            element.setAttribute("data-scroll-animation", "false");
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && entry.target.getAttribute("data-scroll-animation") === "false") {
+                    removeInlineStylesAndBr(['connect22']);
+                    entry.target.setAttribute("data-scroll-animation", "true");
+                    createScrollAnimation(entry.target);
+                    
+                }
+            });
+        }, { threshold: 0.0 });
+
+        snapDivs.forEach((element) => {
+            observer.observe(element);
+        });
+    });
+</script>
+<!-- animation for text end here -->
+
+<!-- project indicators js start here -->
+<script>
+    const section = document.querySelector('.div');
+    const numbers = document.querySelectorAll('.number-project');
+    const indicatorContainer = document.querySelector('.number-indicators-project');
+
+    section.addEventListener('scroll', function () {
+        const scrollPercentage = (section.scrollTop / (section.scrollHeight - window.innerHeight)) * 100;
+        indicatorContainer.style.transform = `translateY(-${scrollPercentage}%)`;
+
+        const currentSection = Math.round(section.scrollTop / window.innerHeight);
+        numbers.forEach((number, index) => {
+            const activeClass = `active${index + 1}`;
+            number.classList.toggle(activeClass, index === currentSection);
+        });
+    });
+
+    numbers.forEach((number, index) => {
+        number.addEventListener('click', function () {
+            section.scrollTop = index * window.innerHeight;
+        });
+    });
+</script>
+<!-- project indicators js start here -->
+
+<!-- dot indicators js start here -->
+<script>
+    const container = document.querySelector('.snap-y');
+    const sections = document.querySelectorAll('.snap-always');
+    sections.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot', 'my-2');
+        dot.addEventListener('click', () => scrollToSection(index));
+        document.getElementById('dot-indicator').appendChild(dot);
+    });
+    container.addEventListener('scroll', () => {
+        const scrollPosition = container.scrollTop;
+        const sectionIndex = Math.round(scrollPosition / window.innerHeight);
+        updateDotIndicator(sectionIndex);
+    });
+    function updateDotIndicator(index) {
+        const dots = document.querySelectorAll('#dot-indicator div');
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active-dot');
+            } else {
+                dot.classList.remove('active-dot');
+            }
+        });
+    }
+    function scrollToSection(index) {
+        sections[index].scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+<!-- dot indicators js end here -->
+
+</html>

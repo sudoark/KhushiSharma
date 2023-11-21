@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+}
+
+#canvas3d {
+  top: 0;
+  left: 0;
+}

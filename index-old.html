@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS's For This Page Starts Here -->
+    <link rel="stylesheet" href="css/main/canvas.css"> <!-- Canvas CSS For Khushi Sharma -->
+    <link rel="stylesheet" href="css/main/main.css"> <!-- Main CSS For This Page -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/reveal.css"> <!-- RevealJs CSS For This Page -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/theme/black.css"> <!-- RevealJs CSS For This Page -->
+    <!-- CSS's For This Page Ends Here -->
+
+    <!-- Scripts/CDN's For This Page Starts Here -->
+    <script src="js/tailwindcssCDNv3.3.5.js"></script> <!-- Tailwindcss Local Js -->
+    <script src="js/main.js"></script> <!-- Main Js For This Page -->
+    <script src="https://cdn.tailwindcss.com" rel="preload"></script> <!-- Tailwindcss CDN -->
+    <!-- Scripts/CDN's For This Page Ends Here -->
+    <!-- links for fonts start here -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@100;200&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
+    <!-- links for fonts end here -->
+    <title>Khushi Sharma</title>
+</head>
+<header class="astro-UY3JLCBK astro-UY3JLCBK-nav" style="z-index: 11; position: relative;">
+    <nav class="z-10 w-full absolute astro-UY3JLCBK-nav">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+            <div
+                class="flex flex-wrap items-center justify-between py-2 gap-6 md:py-4 md:gap-0 relative astro-UY3JLCBK">
+                <input aria-hidden="true" type="checkbox" name="toggle_nav" id="toggle_nav"
+                    class="hidden peer astro-UY3JLCBK">
+                <div class="relative z-20 w-full flex justify-between lg:w-max md:px-0 astro-UY3JLCBK">
+                    <a href="#" aria-label="logo" class="flex space-x-2 items-center astro-UY3JLCBK">
+                        <div aria-hidden="true" class="flex space-x-1 astro-UY3JLCBK">
+                            <img src="images/LOGO.svg" alt="logo">
+                        </div>
+                    </a>
+                    <div class="relative flex items-center lg:hidden max-h-10 astro-UY3JLCBK">
+                        <label role="button" for="toggle_nav" aria-label="humburger" id="hamburger"
+                            class="relative  p-6 -mr-6 astro-UY3JLCBK">
+                            <div aria-hidden="true" id="line"
+                                class="m-auto h-0.5 w-5 rounded bg-sky-900 dark:bg-gray-300 transition duration-300 astro-UY3JLCBK">
+                            </div>
+                            <div aria-hidden="true" id="line2"
+                                class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 dark:bg-gray-300 transition duration-300 astro-UY3JLCBK">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div aria-hidden="true"
+                    class="fixed z-10 inset-0 h-screen w-screen backdrop-blur-2xl origin-bottom scale-y-0 transition duration-500 peer-checked:origin-top peer-checked:scale-y-100 lg:hidden astro-UY3JLCBK">
+                </div>
+                <div class="flex-col z-20 flex-wrap gap-6 p-8 rounded-3xl border border-gray-100 shadow-2xl shadow-gray-600/10 justify-end w-full invisible opacity-0 translate-y-1  absolute top-full left-0 transition-all duration-300 scale-95 origin-top 
+                            lg:relative lg:scale-100 lg:peer-checked:translate-y-0 lg:translate-y-0 lg:flex lg:flex-row lg:items-center lg:gap-0 lg:p-0 lg:bg-transparent lg:w-7/12 lg:visible lg:opacity-100 lg:border-none
+                            peer-checked:scale-100 peer-checked:opacity-100 peer-checked:visible lg:shadow-none 
+                             astro-UY3JLCBK">
+                    <div class="text-gray-600 dark:text-gray-300 lg:pr-4 lg:w-auto w-full lg:pt-0 astro-UY3JLCBK">
+                        <ul
+                            class="tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-4 astro-UY3JLCBK">
+                            <li class="astro-UY3JLCBK">
+                                <a href="#divOne"
+                                    class="block md:px-4 transition NavColor hover:text-white astro-UY3JLCBK">
+                                    <span class="astro-UY3JLCBK">Home</span>
+                                </a>
+                            </li>
+                            <li class="astro-UY3JLCBK">
+                                <a href="#project"
+                                    class="block md:px-4 transition NavColor hover:text-white astro-UY3JLCBK">
+                                    <span class="astro-UY3JLCBK">Projects</span>
+                                </a>
+                            </li>
+                            <li class="astro-UY3JLCBK">
+                                <a href="#connect"
+                                    class="block md:px-4 transition NavColor hover:text-white astro-UY3JLCBK">
+                                    <span class="astro-UY3JLCBK">Connect With Me</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body style="background: black; font-family: 'Montserrat', sans-serif;">
+    <!-- main div -->
+    <div class="snap-y snap-mandatory w-[100%] h-screen overflow-y-scroll ">
+        <!-- child div home start here -->
+        <div class="snap-always snap-center h-screen flex activedivs w-[100%]" id="divOne">
+            <!-- <canvas id="canvas3d">
+            </canvas>
+        
+            <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+            <script type="importmap">
+                {
+                  "imports": {
+                    "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@0.9.489/build/runtime.js"
+                  }
+                }
+              </script>
+            <script type="module" src="js/canvas.js"></script> -->
+            <div class="max-w-7xl lg:mx-auto lg:px-6 max-[500px]:mx-[1rem] md:px-12 xl:px-6 w-[100%]">
+                <div class="relative pt-36 ml-auto">
+                    <div class="float-right left-[-115]">
+                        <svg class="left-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg>
+                        <svg class="right-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                        </svg>
+                    </div>
+                    <div class="lg:w-2/3 text-center mx-auto" style="visibility: hidden;">
+                        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Shaping a
+                            world with
+                            <span class="text-primary dark:text-white">reimagination.</span>
+                        </h1>
+                        <p class="mt-8 text-gray-700 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                            Odio incidunt nam itaque sed eius modi error totam sit illum. Voluptas doloribus asperiores
+                            quaerat
+                            aperiam. Quidem harum omnis beatae ipsum soluta!</p>
+                        <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+                            <a href="#"
+                                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+                                <span class="relative text-base font-semibold text-white">Get started</span>
+                            </a>
+                            <a href="#"
+                                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
+                                <span class="relative text-base font-semibold text-primary dark:text-white">Learn
+                                    more</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <img src="images/01.svg" alt="02" class="one absolute hidden lg:block ml-[82%]">
+                    <div class="lg:top-[115%] absolute home-crea">
+                        <h6 style="color: #9F9F9F">
+                            When you
+                        </h6>
+                        <p style="font-family: 'Montserrat', sans-serif; color: #9F9F9F">creatively
+                            <span style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;"
+                                class="font-semibold">Create.</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- child div home end here -->
+        <br>
+        <!-- child div connect 1 start here -->
+        <div class="snap-always snap-center h-screen flex activedivs" id="connect">
+            <div class="max-w-7xl mx-auto lg:mt-[15%] px-6 md:px-12 xl:px-6 place-self-center relative lg:about-div about-sm">
+                <div>
+                    <h1 class=" text-2xl md:text-7xl/[5.25rem] about about-text">
+                        Hi, I <span>Design</span> , Sing , Write & Solve Problems
+                    </h1>
+                    <p class="text-white font-[600] mt-[40px] description">A UX Designer with a penchant for turning
+                        <span>pixels into poetry</span>. My design philosophy is to put users at<br> the center stage,
+                        crafting digital symphonies that resonate with their hearts and minds. Let's<br> embark on a
+                        creative journey together, where <span>simplicity meets sophistication</span> in every design.
+                    </p>
+                </div>
+                <div class="mt-[8%] absolute">
+                    <h6 style="color: #9F9F9F">
+                        When you
+                    </h6>
+                    <p style="font-family: 'Montserrat', sans-serif; color: #9F9F9F">creatively
+                        <span style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;"
+                            class="font-semibold">Create.</span>
+                    </p>
+                </div>
+                <img src="images/02.svg" alt="02" class="hidden lg:block ml-[82%]">
+            </div>
+        </div>
+        <!-- child div connect 1 end here -->
+        <br>
+        <!-- child div connect 2 start here -->
+        <div class="snap-always snap-center h-screen flex activedivs" id="connect">
+            <section class=" body-font max-w-7xl mx-auto px-6 md:px-12 xl:px-6 place-self-center relative">
+                <div class="container mx-auto flex px-5 lg:py-24 md:flex-row flex-col items-center connect-2">
+                    <div class="lg:max-w-fit lg:w-full lg:w-1/2 w-5/6 lg:mb-0">
+                        <img class="object-cover object-center rounded img-sm" alt="hero" src="images/image 7.svg">
+                    </div>
+                    <div
+                        class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center lg:max-w-[57%]">
+                        <p class="text-white font-[600] lg:mt-[40px] description">In my 3 years of working experience i
+                            have come to a conclusion that there is <span>No Box</span>. Our mind goes where it is easy
+                            to reach so if we tell ourselves that there is a box where everything is easy we will not
+                            ever <span>Think Outside The Box</span>.
+                        </p>
+                        <p class="text-white font-[600] lg:mt-[40px] mt-[20px] description">I like to <span>play with
+                                minds</span> so
+                            that my designs seem <span>playful</span> to the users.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="lg:mt-[-5%] connect-crea absolute">
+                    <h6 style="color: #9F9F9F">
+                        When you
+                    </h6>
+                    <p style="font-family: 'Montserrat', sans-serif; color: #9F9F9F">creatively
+                        <span style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;"
+                            class="font-semibold">Create.</span>
+                    </p>
+                </div>
+                <img src="images/03.svg" alt="02" class="absolute hidden lg:block ml-[79%] mt-[-15.5%]">
+            </section>
+        </div>
+        <!-- child div connect 2 end here -->
+        <br>
+        <!-- child div project start here -->
+        <div class="snap-center h-screen flex activedivs" id="project">
+            <div class="div snap-y snap-mandatory w-[100%] h-screen overflow-y-scroll">
+                <div class="snap-center h-screen flex items-center justify-center flex-col">
+                    <img src="images/Group 7.svg" class="project-graphic-img" alt="" id="p1">
+                    <div class=" text-left relative max-[460px]:left-[-27%] lg:left-[-35%] lg:bottom-[-10%] project-crea"
+                        id="p11">
+                        <h6 style="color: #9F9F9F">
+                            When you
+                        </h6>
+                        <p style="font-family: 'Montserrat', sans-serif; color: #9F9F9F">creatively
+                            <span style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;"
+                                class="font-semibold">Create.</span>
+                        </p>
+                    </div>
+                    <div style="position: relative; " class="lg:top-[10%] project-bt lg:z-20">
+                        <button class="button-pj" onclick="show()" id="show">EXPLORE</button>
+                        <button class="button-pj hide-bt" onclick="hide()" id="hide"
+                            style="display: none;">BACK</button>
+                    </div>
+                    <div class="reveal" style="display: none;">
+                        <div class="slides">
+                            <section>
+                                <section><img src="images/Group 7.svg" class="sec-image max-[500px]:width-[50%]"
+                                        style="display: inline-flex;" alt="" srcset="">
+                                    <p style="text-align: center; color: white;">hello world</p>
+                                </section>
+                                <section><img src="images/Group 7.svg" class="sec-image max-[500px]:width-[50%]"
+                                        style="display: inline-flex;" alt="" srcset="">
+                                    <p style="text-align: center; color: white;">hello world</p>
+                                </section>
+                                <section><img src="images/Group 7.svg" class="sec-image max-[500px]:width-[50%]"
+                                        style="display: inline-flex;" alt="" srcset="">
+                                    <p style="text-align: center; color: white;">hello world</p>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="snap-center h-screen flex" id="p2"></div>
+                <div class="snap-center h-screen flex" id="p3"></div>
+                <div class="snap-center h-screen flex" id="p4"></div>
+            </div>
+            <!-- number indicators start here-->
+            <div class="number-indicators-project hidden lg:flex">
+                <div class="number-project active1">01</div>
+                <div class="number-project">02</div>
+                <div class="number-project">03</div>
+                <div class="number-project">04</div>
+            </div>
+            <!-- number indicators end here -->
+        </div>
+        <!-- child div project end here -->
+    </div>
+    <!-- main div end here -->
+
+    <!-- dot indicators start here-->
+    <div id="dot-indicator"
+        class="fixed hidden lg:flex flex-col items-center top-1/2 transform -translate-y-1/2 right-[6rem]">
+    </div>
+    <!-- dot indicators end here -->
+    
+    <!-- <script src='https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js'></script>
+    <script>
+        ScrollReveal().reveal('.about-text', { interval: 16, reset: true, desktop: true });
+    </script> -->
+
+
+</body>
+<script src="https://unpkg.com/reveal.js@4/dist/reveal.js"></script>
+<!-- project indicators js -->
+
+<script>
+    const section = document.querySelector('.div');
+const numbers = document.querySelectorAll('.number-project');
+const indicatorContainer = document.querySelector('.number-indicators-project');
+
+section.addEventListener('scroll', function () {
+    const scrollPercentage = (section.scrollTop / (section.scrollHeight - window.innerHeight)) * 100;
+    indicatorContainer.style.transform = `translateY(-${scrollPercentage}%)`;
+
+    const currentSection = Math.round(section.scrollTop / window.innerHeight);
+    numbers.forEach((number, index) => {
+        const activeClass = `active${index + 1}`;
+        number.classList.toggle(activeClass, index === currentSection);
+    });
+});
+
+numbers.forEach((number, index) => {
+    number.addEventListener('click', function () {
+        section.scrollTop = index * window.innerHeight;
+    });
+});
+</script>
+<!-- dot indicators js -->
+<script>
+        const container = document.querySelector('.snap-y');
+    const sections = document.querySelectorAll('.snap-always');
+    sections.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot', 'my-2');
+        dot.addEventListener('click', () => scrollToSection(index));
+        document.getElementById('dot-indicator').appendChild(dot);
+    });
+    container.addEventListener('scroll', () => {
+        const scrollPosition = container.scrollTop;
+        const sectionIndex = Math.round(scrollPosition / window.innerHeight);
+        updateDotIndicator(sectionIndex);
+    });
+    function updateDotIndicator(index) {
+        const dots = document.querySelectorAll('#dot-indicator div');
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active-dot');
+            } else {
+                dot.classList.remove('active-dot');
+            }
+        });
+    }
+    function scrollToSection(index) {
+        sections[index].scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</html>

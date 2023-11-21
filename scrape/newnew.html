@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.tailwindcss.com" rel="preload"></script>
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <title>scroll reveal</title>
+</head>
+<body>
+    <div class="snap-y snap-mandatory w-[100%] h-screen overflow-y-scroll">
+        <div class="snap-always snap-center h-screen flex activedivs" id="connect1">
+            <div class="max-w-7xl mx-auto lg:mt-[15%] px-6 md:px-12 xl:px-6 place-self-center relative lg:about-div about-sm fade-in-up">
+                <div>
+                    <h1 class="text-2xl md:text-7xl/[5.25rem] about about-text animate__animated">
+                        Hi, I <span>Design</span>, Sing, Write & Solve Problems
+                    </h1>
+                    <p class="text-black font-[600] mt-[40px] description animate__animated">A UX Designer with a penchant for turning
+                        <span>pixels into poetry</span>. My design philosophy is to put users at<br> the center stage,
+                        crafting digital symphonies that resonate with their hearts and minds. Let's<br> embark on a
+                        creative journey together, where <span>simplicity meets sophistication</span> in every design.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="snap-always snap-center h-screen flex activedivs" id="connect2">
+            <section class="body-font max-w-7xl mx-auto px-6 md:px-12 xl:px-6 place-self-center relative fade-in-up">
+                <div class="container mx-auto flex px-5 lg:py-24 md:flex-row flex-col items-center connect-2">
+                    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center lg:max-w-[57%]">
+                        <p class="text-black font-[600] lg:mt-[40px] description animate__animated">In my 3 years of working experience i
+                            have come to a conclusion that there is <span>No Box</span>. Our mind goes where it is easy
+                            to reach so if we tell ourselves that there is a box where everything is easy we will not
+                            ever <span>Think Outside The Box</span>.
+                        </p>
+                        <p class="text-black font-[600] lg:mt-[40px] mt-[20px] description animate__animated">I like to <span>play with
+                                minds</span> so
+                            that my designs seem <span>playful</span> to the users.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('scroll', function () {
+            const elements = document.querySelectorAll('.fade-in-up');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const triggerPoint = window.innerHeight - 50; // Adjust this value as needed
+
+                if (rect.top < triggerPoint) {
+                    element.classList.add('active');
+                } else {
+                    element.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

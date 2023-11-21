@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.tailwindcss.com" rel="preload"></script>
+    <style>
+/* body::selection {
+            background-color: transparent;
+        } */
+
+        .char::selection {
+            background-color: #fff0c3;
+            color: #000;
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        /* .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+            animation: slide-rotate-hor-top 0.5s linear reverse forwards;
+        } */
+        .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 1s ease-out; /* Adjust the duration as needed */
+            animation-fill-mode: forwards;
+        }
+        @-webkit-keyframes slide-rotate-hor-top {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+            transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-150px) rotateX(-90deg);
+            transform: translateY(-150px) rotateX(-90deg);
+  }
+}
+
+    </style>
+    <title>scroll reveal</title>
+</head>
+<body>
+    <div class="snap-y snap-mandatory w-[100%] h-screen overflow-y-scroll ">
+        <div class="snap-always snap-center h-screen flex activedivs">
+            <div class="max-w-7xl mx-auto lg:mt-[15%] px-6 md:px-12 xl:px-6 place-self-center relative lg:about-div about-sm fade-in-up" id="fade1">
+                <div>
+                    <h1 class="text-2xl md:text-7xl/[5.25rem] about about-text animate__animated char">
+                        Hi, I <span class="char">Design</span>, Sing, Write & Solve Problems
+                    </h1>
+                    <p class="text-black font-[600] mt-[40px] description animate__animated char">A UX Designer with a penchant for turning
+                        <span class="char">pixels into poetry</span>. My design philosophy is to put users at<br> the center stage,
+                        crafting digital symphonies that resonate with their hearts and minds. Let's<br> embark on a
+                        creative journey together, where <span class="char">simplicity meets sophistication</span> in every design.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="snap-always snap-center h-screen flex activedivs">
+            <div class="max-w-7xl mx-auto lg:mt-[15%] px-6 md:px-12 xl:px-6 place-self-center relative lg:about-div about-sm fade-in-up" id="fade2">
+                <div>
+                    <h1 class="text-2xl md:text-7xl/[5.25rem] about about-text animate__animated char">
+                        Hi, I <span class="char">Design</span>, Sing, Write & Solve Problems
+                    </h1>
+                    <p class="text-black font-[600] mt-[40px] description animate__animated char">A UX Designer with a penchant for turning
+                        <span class="char">pixels into poetry</span>. My design philosophy is to put users at<br> the center stage,
+                        crafting digital symphonies that resonate with their hearts and minds. Let's<br> embark on a
+                        <span class="char" >pixels into poetry</span>. My design philosophy is to put users at<br> the center stage,
+                        creative journey together, where <span >simplicity meets sophistication</span> in every design.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="snap-always snap-center h-screen flex activedivs">
+            <div class="max-w-7xl mx-auto lg:mt-[15%] px-6 md:px-12 xl:px-6 place-self-center relative lg:about-div about-sm fade-in-up" id="fade3">
+                <div>
+                    <h1 class="text-2xl md:text-7xl/[5.25rem] about about-text animate__animated">
+                        Hi, I <span>Design</span>, Sing, Write & Solve Problems
+                    </h1>
+                    <p class="text-black font-[600] mt-[40px] description animate__animated">A UX Designer with a penchant for turning
+                        <span>pixels into poetry</span>. My design philosophy is to put users at<br> the center stage,
+                        crafting digital symphonies that resonate with their hearts and minds. Let's<br> embark on a
+                        creative journey together, where <span>simplicity meets sophistication</span> in every design.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="snap-always snap-center h-screen flex activedivs">
+            <div class="max-w-7xl mx-auto lg:mt-[15%] px-6 md:px-12 xl:px-6 place-self-center relative lg:about-div about-sm fade-in-up" id="fade4">
+                <div>
+                    <h1 class="text-2xl md:text-7xl/[5.25rem] about about-text animate__animated">
+                        Hi, I <span>Design</span>, Sing, Write & Solve Problems
+                    </h1>
+                    <p class="text-black font-[600] mt-[40px] description animate__animated">A UX Designer with a penchant for turning
+                        <span>pixels into poetry</span>. My design philosophy is to put users at<br> the center stage,
+                        crafting digital symphonies that resonate with their hearts and minds. Let's<br> embark on a
+                        creative journey together, where <span>simplicity meets sophistication</span> in every design.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
+        };
+
+        function handleIntersect(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active', 'animate__fadeInUp');
+                    console.log(`${entry.target.id} activated`);
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver(handleIntersect, observerOptions);
+
+        // Specify the IDs of the elements you want to observe
+        const elementIdsToObserve = ['fade1', 'fade2', 'fade3', 'fade4'];
+
+        elementIdsToObserve.forEach(ids => {
+            const target = document.getElementById(ids);
+            if (target) {
+                observer.observe(target);
+            }
+        });
+    </script>
+</body>
+</html>
